@@ -1,0 +1,19 @@
+.ngx-org {
+  &-image {
+    background-repeat: no-repeat;
+    width: 2em;
+    height: 2em;
+    margin-right: 0.5em;
+    background-color: white;
+    border-radius: 50%;
+    padding: 0.25em;
+  }
+
+  &-name {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  &-title {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+}

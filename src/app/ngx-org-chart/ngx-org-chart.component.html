@@ -1,0 +1,17 @@
+<ngx-chart-node *ngIf="topNode" ngClass="ngx-org-{{direction}}" [node]="topNode" [hasParent]="hasParent"
+  [direction]="direction" (itemClick)="itemClick.emit($event)">
+</ngx-chart-node>
+
+<div *ngIf="topNode?.childs?.length" ngClass="ngx-org-reports-{{direction}}" class="ngx-org-reports">
+  <ng-container *ngFor="let childNode of topNode?.childs; first as isFirst; last as isLast">
+    <div ngClass="ngx-org-org-container-{{direction}}" class="ngx-org-org-container">
+      <div ngClass="ngx-org-connector-container-{{direction}}" class="ngx-org-connector-container">
+        <div class="ngx-org-connector ngx-org-border" [style.border-color]="isFirst?'transparent':''"></div>
+        <div class="ngx-org-border"></div>
+        <div class="ngx-org-connector ngx-org-border" [style.border-color]="isLast?'transparent':''"></div>
+      </div>
+      <ngx-org-chart [topNode]="childNode" [hasParent]="true" [direction]="direction" (itemClick)="itemClick.emit($event)">
+      </ngx-org-chart>
+    </div>
+  </ng-container>
+</div>

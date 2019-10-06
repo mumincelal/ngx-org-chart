@@ -1,0 +1,7 @@
+<div *ngIf="topNodes?.length">
+  <ng-container *ngFor="let topNode of topNodes">
+    <ngx-org-chart [topNode]="topNode" direction="vertical" (itemClick)="test($event)"></ngx-org-chart>
+  </ng-container>
+</div>
+
+<router-outlet></router-outlet>
