@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { NgxChartNodeModule } from '../ngx-chart-node/ngx-chart-node.module';
+import { NgxChartDesignerModule } from '../ngx-chart-designer/ngx-chart-designer.module';
 import { NgxOrgChartComponent } from './ngx-org-chart.component';
 import { NgxOrgChartRoutingModule } from './ngx-org-chart-routing.module';
 
@@ -11,7 +11,7 @@ import { NgxOrgChartRoutingModule } from './ngx-org-chart-routing.module';
   ],
   imports: [
     BrowserModule,
-    NgxChartNodeModule,
+    NgxChartDesignerModule,
     NgxOrgChartRoutingModule
   ],
   bootstrap: [NgxOrgChartComponent],

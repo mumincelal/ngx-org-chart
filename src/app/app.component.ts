@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  topNodes: any = [
+  nodes: any = [
     {
       name: 'Sundar Pichai',
       cssClass: 'ngx-org-ceo',
