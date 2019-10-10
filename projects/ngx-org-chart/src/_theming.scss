@@ -1,5 +1,6 @@
-@import "../app/ngx-chart-node/ngx-chart-node.theme";
-@import "../app/ngx-org-chart/ngx-org-chart.theme";
+@import "./lib/ngx-chart-node/ngx-chart-node.theme";
+@import "./lib/ngx-org-chart/ngx-org-chart.theme";
+
 .ngx-org {
   &-horizontal {
     padding: 1em 0;

@@ -1,21 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgxOrgChartModule } from 'ngx-org-chart';
 
-import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { NgxOrgChartModule } from './ngx-org-chart/ngx-org-chart.module';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    AppRoutingModule,
     BrowserModule,
-    CommonModule,
+    AppRoutingModule,
     NgxOrgChartModule
   ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
