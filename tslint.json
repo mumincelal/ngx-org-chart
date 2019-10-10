@@ -18,7 +18,7 @@
     "component-selector": [
       true,
       "element",
-      ["app", "ngx-chart-node"],
+      "app",
       "kebab-case"
     ],
     "import-blacklist": [

@@ -1,6 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Oswald|Patua+One&display=swap');
-@import "./assets/theming";
+@import "../projects/ngx-org-chart/src/theming";
 
 html, body {
   display: flex;
@@ -23,19 +22,3 @@ html, body {
   color: black;
   width: 10em;
 }
-
-// .ngx-org-ceo {
-//   background-color: #4caf50;
-// }
-
-// .ngx-org-head {
-//   background-color: #03A9F4;
-// }
-
-// .ngx-org-vp {
-//   background-color: #607D8B;
-// }
-
-// .ngx-org-man {
-//   background-color: #9C27B0;
-// }
