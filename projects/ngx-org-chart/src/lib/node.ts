@@ -1,7 +1,7 @@
 export interface INode {
   name: string;
   cssClass: string;
-  imageUrl: string;
+  image: string;
   title: string;
   childs: INode[];
 }
@@ -9,7 +9,7 @@ export interface INode {
 export class Node implements INode {
   name: string;
   cssClass: string;
-  imageUrl: string;
+  image: string;
   title: string;
   childs: Node[];
   parent?: Node;
