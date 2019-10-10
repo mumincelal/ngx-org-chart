@@ -1,4 +1,4 @@
-import { Component, EventEmitter, HostBinding, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { INode } from '../node';
 
@@ -10,7 +10,7 @@ import { INode } from '../node';
 export class NgxOrgChartComponent {
 
   @Input()
-  topNode: INode;
+  nodes: INode[];
 
   @Input()
   hasParent = false;
@@ -19,9 +19,4 @@ export class NgxOrgChartComponent {
   direction: 'vertical' | 'horizontal' = 'vertical';
 
   @Output() itemClick = new EventEmitter<INode>();
-
-  @HostBinding('style.flex-direction')
-  get hostClass() {
-    return this.direction === 'vertical' ? 'column' : '';
-  }
 }

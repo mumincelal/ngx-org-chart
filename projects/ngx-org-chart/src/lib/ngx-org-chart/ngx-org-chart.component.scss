@@ -1,40 +1,21 @@
-:host {
-  display: table-cell;
-  align-items: center;
+html, body {
+  display: flex;
   flex: 1;
 }
 
-.ngx-org {
-  &-vertical {
-    flex-direction: column;
-  }
+.ngx-org-name {
+  font-family: 'Patua One', cursive;
+}
 
-  &-org-container {
-    display: flex;
+.ngx-org-title {
+  font-family: 'Oswald', sans-serif;
+}
 
-    &-vertical {
-      flex-direction: column;
-    }
-  }
+.ngx-org-border {
+  border-color: #9E9E9E;
+}
 
-  &-connector {
-    flex: 1;
-
-    &-container {
-      display: flex;
-
-      &-horizontal {
-        flex-direction: column;
-      }
-    }
-  }
-
-  &-reports {
-    display: flex;
-    flex: 1;
-
-    &-horizontal {
-      flex-direction: column;
-    }
-  }
+.ngx-org-box {
+  color: black;
+  width: 10em;
 }
