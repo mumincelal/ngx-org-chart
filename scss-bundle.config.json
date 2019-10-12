@@ -1,0 +1,9 @@
+{
+  "bundlerOptions": {
+      "entryFile": "./projects/ngx-org-chart/src/_theming.scss",
+      "rootDir": "./projects/ngx-org-chart/src/",
+      "outFile": "./dist/ngx-org-chart/_theming.scss",
+      "ignoreImports": ["~@angular/.*"],
+      "logLevel": "silent"
+  }
+}
