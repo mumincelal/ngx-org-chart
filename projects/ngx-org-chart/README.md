@@ -1,24 +1,262 @@
-# NgxOrgChart
+# ngx-org-chart
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
+The `ngx-org-chart` creates hierarchical organization chart.
+You can create hierarchical organization charts with it.
 
-## Code scaffolding
+It applies multiple root node. That means you can create multiple organization charts at the same time.
 
-Run `ng generate component component-name --project ngx-org-chart` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-org-chart`.
-> Note: Don't forget to add `--project ngx-org-chart` or else it will be added to the default project in your `angular.json` file. 
+![Org Chart](https://raw.githubusercontent.com/mumincelal/ngx-org-ui/master/projects/ngx-org-chart/organization-chart.png)
 
-## Build
+## Table of Contents
 
-Run `ng build ngx-org-chart` to build the project. The build artifacts will be stored in the `dist/` directory.
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Inputs](#inputs)
 
-## Publishing
+## Installation
 
-After building your library with `ng build ngx-org-chart`, go to the dist folder `cd dist/ngx-org-chart` and run `npm publish`.
+You can install the package using following command.
 
-## Running unit tests
+```sh
+$ npm install ngx-org-chart
+```
 
-Run `ng test ngx-org-chart` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Import below file into style.scss file.
 
-## Further help
+```js
+import '~ngx-org-chart/_theming.scss'
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Usage
+
+|Property|Type|Description
+|---|---|---
+|name|`string`|Name of the node
+|cssClass|`string`|Custom css class for the node
+|image|`string`|Image of the node
+|title|`string`|The node's title
+|childs|`Node[]`|The array of child nodes
+
+### `app.module.ts`
+```js
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { NgxOrgChartModule } from 'ngx-org-chart';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgxOrgChartModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+### `app.component.html`
+```html
+<ngx-org-chart [nodes]="nodes" direction="vertical" (itemClick)="test($event)"></ngx-org-chart>
+```
+
+### `app.component.ts`
+```js
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent {
+  nodes: any = [
+    {
+      name: 'Sundar Pichai',
+      cssClass: 'ngx-org-ceo',
+      image: '',
+      title: 'Chief Executive Officer',
+      childs: [
+        {
+          name: 'Thomas Kurian',
+          cssClass: 'ngx-org-ceo',
+          image: 'assets/node.svg',
+          title: 'CEO, Google Cloud',
+        },
+        {
+          name: 'Susan Wojcicki',
+          cssClass: 'ngx-org-ceo',
+          image: 'assets/node.svg',
+          title: 'CEO, YouTube',
+          childs: [
+            {
+              name: 'Beau Avril',
+              cssClass: 'ngx-org-head',
+              image: 'assets/node.svg',
+              title: 'Global Head of Business Operations',
+              childs: []
+            },
+            {
+              name: 'Tara Walpert Levy',
+              cssClass: 'ngx-org-vp',
+              image: 'assets/node.svg',
+              title: 'VP, Agency and Brand Solutions',
+              childs: []
+            },
+            {
+              name: 'Ariel Bardin',
+              cssClass: 'ngx-org-vp',
+              image: 'assets/node.svg',
+              title: 'VP, Product Management',
+              childs: []
+            }
+          ]
+        },
+        {
+          name: 'Jeff Dean',
+          cssClass: 'ngx-org-head',
+          image: 'assets/node.svg',
+          title: 'Head of Artificial Intelligence',
+          childs: [
+            {
+              name: 'David Feinberg',
+              cssClass: 'ngx-org-ceo',
+              image: 'assets/node.svg',
+              title: 'CEO, Google Health',
+              childs: []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      name: 'Sundar Pichai',
+      cssClass: 'ngx-org-ceo',
+      image: 'assets/node.svg',
+      title: 'Chief Executive Officer',
+      childs: [
+        {
+          name: 'Thomas Kurian',
+          cssClass: 'ngx-org-ceo',
+          image: 'assets/node.svg',
+          title: 'CEO, Google Cloud',
+        },
+        {
+          name: 'Susan Wojcicki',
+          cssClass: 'ngx-org-ceo',
+          image: 'assets/node.svg',
+          title: 'CEO, YouTube',
+          childs: [
+            {
+              name: 'Beau Avril',
+              cssClass: 'ngx-org-head',
+              image: 'assets/node.svg',
+              title: 'Global Head of Business Operations',
+              childs: []
+            },
+            {
+              name: 'Tara Walpert Levy',
+              cssClass: 'ngx-org-vp',
+              image: 'assets/node.svg',
+              title: 'VP, Agency and Brand Solutions',
+              childs: []
+            },
+            {
+              name: 'Ariel Bardin',
+              cssClass: 'ngx-org-vp',
+              image: 'assets/node.svg',
+              title: 'VP, Product Management',
+              childs: []
+            }
+          ]
+        },
+        {
+          name: 'Jeff Dean',
+          cssClass: 'ngx-org-head',
+          image: 'assets/node.svg',
+          title: 'Head of Artificial Intelligence',
+          childs: [
+            {
+              name: 'David Feinberg',
+              cssClass: 'ngx-org-ceo',
+              image: 'assets/node.svg',
+              title: 'CEO, Google Health',
+              childs: []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      name: 'Sundar Pichai',
+      cssClass: 'ngx-org-ceo',
+      image: 'assets/node.svg',
+      title: 'Chief Executive Officer',
+      childs: [
+        {
+          name: 'Thomas Kurian',
+          cssClass: 'ngx-org-ceo',
+          image: 'assets/node.svg',
+          title: 'CEO, Google Cloud',
+        },
+        {
+          name: 'Susan Wojcicki',
+          cssClass: 'ngx-org-ceo',
+          image: 'assets/node.svg',
+          title: 'CEO, YouTube',
+          childs: [
+            {
+              name: 'Beau Avril',
+              cssClass: 'ngx-org-head',
+              image: 'assets/node.svg',
+              title: 'Global Head of Business Operations',
+              childs: []
+            },
+            {
+              name: 'Tara Walpert Levy',
+              cssClass: 'ngx-org-vp',
+              image: 'assets/node.svg',
+              title: 'VP, Agency and Brand Solutions',
+              childs: []
+            },
+            {
+              name: 'Ariel Bardin',
+              cssClass: 'ngx-org-vp',
+              image: 'assets/node.svg',
+              title: 'VP, Product Management',
+              childs: []
+            }
+          ]
+        },
+        {
+          name: 'Jeff Dean',
+          cssClass: 'ngx-org-head',
+          image: 'assets/node.svg',
+          title: 'Head of Artificial Intelligence',
+          childs: [
+            {
+              name: 'David Feinberg',
+              cssClass: 'ngx-org-ceo',
+              image: 'assets/node.svg',
+              title: 'CEO, Google Health',
+              childs: []
+            }
+          ]
+        }
+      ]
+    }
+  ];
+}
+```
+## Inputs
+
+|Name|Type|Description
+|---|---|---|
+|`nodes`|`Node` object|The `Node` object that contains node info mentioned above
+|`direction`|`vertical` or `horizontal`| Direction mode of the chart
