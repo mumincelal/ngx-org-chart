@@ -5,7 +5,8 @@ You can create hierarchical organization charts with it.
 
 It applies multiple root node. That means you can create multiple organization charts at the same time.
 
-![Org Chart](https://raw.githubusercontent.com/mumincelal/ngx-org-ui/master/projects/ngx-org-chart/organization-chart.png)
+![Org Chart](https://raw.githubusercontent.com/mumincelal/ngx-org-ui/master/projects/ngx-org-chart/organization-chart-horizontal.png)
+![Org Chart](https://raw.githubusercontent.com/mumincelal/ngx-org-ui/master/projects/ngx-org-chart/organization-chart-vertical.png)
 
 ## Table of Contents
 
