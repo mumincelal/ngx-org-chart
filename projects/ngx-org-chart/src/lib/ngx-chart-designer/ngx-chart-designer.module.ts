@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { NgxChartNodeModule } from '../ngx-chart-node/ngx-chart-node.module';
 import { NgxChartDesignerComponent } from './ngx-chart-designer.component';
-import { NgxChartDesignerRoutingModule } from './ngx-chart-designer-routing.module';
 
 @NgModule({
   declarations: [
@@ -11,8 +10,7 @@ import { NgxChartDesignerRoutingModule } from './ngx-chart-designer-routing.modu
   ],
   imports: [
     BrowserModule,
-    NgxChartNodeModule,
-    NgxChartDesignerRoutingModule
+    NgxChartNodeModule
   ],
   bootstrap: [NgxChartDesignerComponent],
   exports: [NgxChartDesignerComponent]
