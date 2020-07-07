@@ -40,7 +40,7 @@ import '~ngx-org-chart/_theming.scss'
 
 ### `app.module.ts`
 ```js
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { NgxOrgChartModule } from 'ngx-org-chart';
 
@@ -52,7 +52,7 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    CommonModule,
     AppRoutingModule,
     NgxOrgChartModule
   ],

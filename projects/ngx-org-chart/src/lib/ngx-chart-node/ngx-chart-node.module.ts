@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { NgxChartNodeComponent } from './ngx-chart-node.component';
@@ -8,7 +8,7 @@ import { NgxChartNodeComponent } from './ngx-chart-node.component';
     NgxChartNodeComponent
   ],
   imports: [
-    BrowserModule
+    CommonModule
   ],
   bootstrap: [NgxChartNodeComponent],
   exports: [NgxChartNodeComponent]
