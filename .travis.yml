@@ -1,14 +1,14 @@
 language: node_js
 
 node_js:
-  - lts/*
+  - "lts/*"
 
 os: linux
 
-cache: yarn
+cache: npm
 
 install:
-  - yarn install
+  - npm install
 
 script:
   - npm run build:prod
@@ -17,10 +17,10 @@ script:
 jobs:
   include:
     - stage: Build
-      script: yarn run build:prod
+      script: npm run build:prod
     - stage: npm release
       if: branch = "master"
-      script: yarn run build:prod
+      script: npm run build:prod
       deploy:
         provider: npm
         email: "$NPM_EMAIL"
