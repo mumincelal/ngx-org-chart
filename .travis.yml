@@ -7,11 +7,6 @@ os: linux
 
 dist: focal
 
-branches:
-  only:
-    - master
-    - /^v[0-9]+.*$/
-
 cache: yarn
 
 install:
@@ -26,6 +21,7 @@ jobs:
     - stage: Build
       script: yarn run build:prod
     - stage: npm release
+      if: branch = "master"
       script: yarn run build:prod
       deploy:
         provider: npm
@@ -33,4 +29,4 @@ jobs:
         api_token: "$NPM_API_TOKEN"
         cleanup: true
         on:
-          tags: true
+          branch: master
