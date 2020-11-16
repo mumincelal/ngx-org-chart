@@ -3,7 +3,14 @@ language: node_js
 node_js:
   - lts/*
 
+os: linux
+
 dist: focal
+
+branches:
+  only:
+    - master
+    - /^v[0-9]+.*$/
 
 cache: yarn
 
@@ -12,6 +19,7 @@ install:
 
 script:
   - npm run build:prod
+
 
 jobs:
   include:
@@ -23,10 +31,6 @@ jobs:
         provider: npm
         email: "$NPM_EMAIL"
         api_token: "$NPM_API_TOKEN"
-        skip_cleanup: true
+        cleanup: true
         on:
           tags: true
-        branches:
-          only:
-            - master
-            - /^v[0-9]+.*$/
