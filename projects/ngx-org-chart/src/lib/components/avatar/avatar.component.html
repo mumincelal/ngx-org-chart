@@ -1,0 +1,9 @@
+<ng-container *ngTemplateOutlet="image ? avatarImage : fullnameAbbreviation"></ng-container>
+
+<ng-template #fullnameAbbreviation>
+  <span class="circle text"> {{ fullname | abbreviation }} </span>
+</ng-template>
+
+<ng-template #avatarImage>
+  <img class="circle" [src]="image" alt="Avatar" />
+</ng-template>

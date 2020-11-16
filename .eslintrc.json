@@ -1,0 +1,36 @@
+{
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "extends": [
+    "airbnb-base",
+    "prettier/@typescript-eslint",
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "comma-dangle": ["off"],
+    "import/no-unresolved": [2, { "ignore": ["@*$"] }],
+    "import/prefer-default-export": ["off"],
+    "no-empty-function": ["error", { "allow": ["constructors"] }],
+    "no-unused-vars": ["error", { "vars": "all", "args": "none" }],
+    "class-methods-use-this": ["off"],
+    "camelcase": ["error"],
+    "no-duplicate-imports": ["error"],
+    "@typescript-eslint/explicit-module-boundary-types": ["error"],
+    "@typescript-eslint/no-explicit-any": ["error"],
+    "newline-per-chained-call": ["error", { "ignoreChainWithDepth": 2 }],
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "import/extensions": ["off"]
+  }
+}

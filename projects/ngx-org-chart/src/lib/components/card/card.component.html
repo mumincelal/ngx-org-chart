@@ -1,0 +1,9 @@
+<div class="container">
+  <avatar [fullname]="fullname"></avatar>
+  <div class="info">
+    <span>{{ fullname }}</span>
+    <span>{{ title }}</span>
+    <span *ngIf="title && department">&#44; </span>
+    <span>{{ department }}</span>
+  </div>
+</div>

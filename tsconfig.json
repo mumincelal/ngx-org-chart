@@ -1,34 +1,26 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
+    "incremental": true,
+    "outDir": "./build",
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
-    "module": "esnext",
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2015",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
+    "target": "ES2015",
+    "module": "ES2020",
     "lib": [
-      "es2018",
-      "dom"
+      "ES2020",
+      "DOM"
     ],
+    "baseUrl": "./",
     "paths": {
       "ngx-org-chart": [
-        "dist/ngx-org-chart"
-      ],
-      "ngx-org-chart/*": [
-        "dist/ngx-org-chart/*"
+        "build/ngx-org-chart/ngx-org-chart",
+        "build/ngx-org-chart"
       ]
     }
-  },
-  "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
   }
 }

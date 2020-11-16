@@ -1,0 +1,16 @@
+@import '../../styles/colors.scss';
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5vw;
+  height: 3.5vw;
+  border-radius: 50%;
+  border: 1px solid $border-gray;
+  background-color: $background-white;
+}
+
+.text {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

@@ -1,26 +1,23 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../out-tsc/lib",
-    "target": "es2015",
+    "outDir": "../../lib",
+    "target": "ES2015",
     "declaration": true,
+    "declarationMap": true,
     "inlineSources": true,
-    "types": [],
     "lib": [
-      "dom",
-      "es2018"
-    ]
+      "DOM",
+      "ES2020"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "angularCompilerOptions": {
-    "annotateForClosureCompiler": true,
     "skipTemplateCodegen": true,
     "strictMetadataEmit": true,
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true,
     "enableResourceInlining": true
-  },
-  "exclude": [
-    "src/test.ts",
-    "**/*.spec.ts"
-  ]
+  }
 }

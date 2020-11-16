@@ -1,0 +1,11 @@
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { AvatarModule } from '../avatar/avatar.module';
+import { CardComponent } from './card.component';
+
+@NgModule({
+  imports: [CommonModule, AvatarModule],
+  declarations: [CardComponent],
+  exports: [CardComponent]
+})
+export class CardModule {}

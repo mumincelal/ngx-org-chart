@@ -1,0 +1,32 @@
+language: node_js
+
+node_js:
+  - lts/*
+
+dist: focal
+
+cache: yarn
+
+install:
+  - yarn install
+
+script:
+  - npm run build:prod
+
+jobs:
+  include:
+    - stage: Build
+      script: yarn run build:prod
+    - stage: npm release
+      script: yarn run build:prod
+      deploy:
+        provider: npm
+        email: "$NPM_EMAIL"
+        api_token: "$NPM_API_TOKEN"
+        skip_cleanup: true
+        on:
+          tags: true
+        branches:
+          only:
+            - master
+            - /^v[0-9]+.*$/

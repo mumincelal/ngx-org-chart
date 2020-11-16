@@ -1,0 +1,22 @@
+@import '../../styles/colors.scss';
+
+.container {
+  display: flex;
+  align-items: center;
+  border: 1px solid $border-gray;
+  background-color: $background-white;
+  padding: 0.5em;
+}
+
+.info {
+  margin-left: 0.5em;
+
+  span:nth-child(1) {
+    display: block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  span:nth-child(2) {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+}
