@@ -5,8 +5,6 @@ node_js:
 
 os: linux
 
-dist: focal
-
 cache: yarn
 
 install:
