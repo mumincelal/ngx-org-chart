@@ -1,251 +1,27 @@
-# ngx-org-chart
+# NgxOrgChart
 
-The `ngx-org-chart` creates hierarchical organization chart.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
 
-## Table of Contents
+## Development server
 
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [Inputs](#inputs)
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Installation
+## Code scaffolding
 
-You can install the package using following command.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-```sh
-$ npm install ngx-org-chart
-```
+## Build
 
-## Usage
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-|Property|Type|Description
-|---|---|---
-|name|`string`|Name of the node
-|cssClass|`string`|Custom css class for the node
-|image|`string`|Image of the node
-|title|`string`|The node's title
-|childs|`Node[]`|The array of child nodes
+## Running unit tests
 
-### `app.module.ts`
-```js
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { NgxOrgChartModule } from 'ngx-org-chart';
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+## Running end-to-end tests
 
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    CommonModule,
-    AppRoutingModule,
-    NgxOrgChartModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
-```
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-### `app.component.html`
-```html
-<ngx-org-chart [nodes]="nodes" direction="vertical" (itemClick)="test($event)"></ngx-org-chart>
-```
+## Further help
 
-### `app.component.ts`
-```js
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
-})
-export class AppComponent {
-  nodes: any = [
-    {
-      name: 'Sundar Pichai',
-      cssClass: 'ngx-org-ceo',
-      image: '',
-      title: 'Chief Executive Officer',
-      childs: [
-        {
-          name: 'Thomas Kurian',
-          cssClass: 'ngx-org-ceo',
-          image: 'assets/node.svg',
-          title: 'CEO, Google Cloud',
-        },
-        {
-          name: 'Susan Wojcicki',
-          cssClass: 'ngx-org-ceo',
-          image: 'assets/node.svg',
-          title: 'CEO, YouTube',
-          childs: [
-            {
-              name: 'Beau Avril',
-              cssClass: 'ngx-org-head',
-              image: 'assets/node.svg',
-              title: 'Global Head of Business Operations',
-              childs: []
-            },
-            {
-              name: 'Tara Walpert Levy',
-              cssClass: 'ngx-org-vp',
-              image: 'assets/node.svg',
-              title: 'VP, Agency and Brand Solutions',
-              childs: []
-            },
-            {
-              name: 'Ariel Bardin',
-              cssClass: 'ngx-org-vp',
-              image: 'assets/node.svg',
-              title: 'VP, Product Management',
-              childs: []
-            }
-          ]
-        },
-        {
-          name: 'Jeff Dean',
-          cssClass: 'ngx-org-head',
-          image: 'assets/node.svg',
-          title: 'Head of Artificial Intelligence',
-          childs: [
-            {
-              name: 'David Feinberg',
-              cssClass: 'ngx-org-ceo',
-              image: 'assets/node.svg',
-              title: 'CEO, Google Health',
-              childs: []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      name: 'Sundar Pichai',
-      cssClass: 'ngx-org-ceo',
-      image: 'assets/node.svg',
-      title: 'Chief Executive Officer',
-      childs: [
-        {
-          name: 'Thomas Kurian',
-          cssClass: 'ngx-org-ceo',
-          image: 'assets/node.svg',
-          title: 'CEO, Google Cloud',
-        },
-        {
-          name: 'Susan Wojcicki',
-          cssClass: 'ngx-org-ceo',
-          image: 'assets/node.svg',
-          title: 'CEO, YouTube',
-          childs: [
-            {
-              name: 'Beau Avril',
-              cssClass: 'ngx-org-head',
-              image: 'assets/node.svg',
-              title: 'Global Head of Business Operations',
-              childs: []
-            },
-            {
-              name: 'Tara Walpert Levy',
-              cssClass: 'ngx-org-vp',
-              image: 'assets/node.svg',
-              title: 'VP, Agency and Brand Solutions',
-              childs: []
-            },
-            {
-              name: 'Ariel Bardin',
-              cssClass: 'ngx-org-vp',
-              image: 'assets/node.svg',
-              title: 'VP, Product Management',
-              childs: []
-            }
-          ]
-        },
-        {
-          name: 'Jeff Dean',
-          cssClass: 'ngx-org-head',
-          image: 'assets/node.svg',
-          title: 'Head of Artificial Intelligence',
-          childs: [
-            {
-              name: 'David Feinberg',
-              cssClass: 'ngx-org-ceo',
-              image: 'assets/node.svg',
-              title: 'CEO, Google Health',
-              childs: []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      name: 'Sundar Pichai',
-      cssClass: 'ngx-org-ceo',
-      image: 'assets/node.svg',
-      title: 'Chief Executive Officer',
-      childs: [
-        {
-          name: 'Thomas Kurian',
-          cssClass: 'ngx-org-ceo',
-          image: 'assets/node.svg',
-          title: 'CEO, Google Cloud',
-        },
-        {
-          name: 'Susan Wojcicki',
-          cssClass: 'ngx-org-ceo',
-          image: 'assets/node.svg',
-          title: 'CEO, YouTube',
-          childs: [
-            {
-              name: 'Beau Avril',
-              cssClass: 'ngx-org-head',
-              image: 'assets/node.svg',
-              title: 'Global Head of Business Operations',
-              childs: []
-            },
-            {
-              name: 'Tara Walpert Levy',
-              cssClass: 'ngx-org-vp',
-              image: 'assets/node.svg',
-              title: 'VP, Agency and Brand Solutions',
-              childs: []
-            },
-            {
-              name: 'Ariel Bardin',
-              cssClass: 'ngx-org-vp',
-              image: 'assets/node.svg',
-              title: 'VP, Product Management',
-              childs: []
-            }
-          ]
-        },
-        {
-          name: 'Jeff Dean',
-          cssClass: 'ngx-org-head',
-          image: 'assets/node.svg',
-          title: 'Head of Artificial Intelligence',
-          childs: [
-            {
-              name: 'David Feinberg',
-              cssClass: 'ngx-org-ceo',
-              image: 'assets/node.svg',
-              title: 'CEO, Google Health',
-              childs: []
-            }
-          ]
-        }
-      ]
-    }
-  ];
-}
-```
-## Inputs
-
-|Name|Type|Description
-|---|---|---|
-|`nodes`|`Node` object|The `Node` object that contains node info mentioned above
-|`direction`|`vertical` or `horizontal`| `vertical` direction mode is exist for now.
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

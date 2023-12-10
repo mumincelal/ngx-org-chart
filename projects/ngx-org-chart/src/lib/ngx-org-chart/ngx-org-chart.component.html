@@ -1,7 +1,0 @@
-<div *ngIf="nodes?.length">
-  <ng-container *ngFor="let node of nodes">
-    <div class="ngx-org-self-{{direction}}">
-      <ngx-chart-designer [node]="node" [direction]="direction" (itemClick)="itemClick.emit($event)"></ngx-chart-designer>
-    </div>
-  </ng-container>
-</div>
