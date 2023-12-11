@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 10px;
+  width: 300px;
+  gap: 10px;
+}
+
+.container .info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.container .info .name {
+  font-weight: bold;
+}

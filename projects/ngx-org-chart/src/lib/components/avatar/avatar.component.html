@@ -1,0 +1,6 @@
+<div class="container">
+  <img *ngIf="src; else abbr" [src]="src" alt="Avatar" />
+  <ng-template #abbr>
+    <p class="avatar-abbr">{{ abbr }}</p>
+  </ng-template>
+</div>
