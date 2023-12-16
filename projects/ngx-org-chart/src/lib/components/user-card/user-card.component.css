@@ -11,9 +11,13 @@
 .container .info {
   display: flex;
   flex-direction: column;
-  gap: 5px;
 }
 
-.container .info .name {
+.container .info .fullname {
   font-weight: bold;
+  font-size: 18px;
+}
+
+.container .info .title {
+  font-size: 14px;
 }

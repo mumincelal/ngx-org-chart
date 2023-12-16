@@ -1,10 +1,10 @@
-<div class="container">
+<div class="container" #userCard>
   <ngx-org-chart-avatar
-    [abbr]="getAbbreviation(fullname)"
+    [fallback]="abbreviation"
     [src]="avatarUrl"
   ></ngx-org-chart-avatar>
   <div class="info">
-    <p class="name">{{ fullname }}</p>
-    <p class="title">{{ title }}</p>
+    <span class="fullname">{{ fullname }}</span>
+    <span class="title">{{ title }}</span>
   </div>
 </div>

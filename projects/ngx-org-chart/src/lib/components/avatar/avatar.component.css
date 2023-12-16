@@ -1,5 +1,7 @@
 .container {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   border: 2px solid black;
   overflow: hidden;
@@ -14,13 +16,9 @@
   object-fit: cover;
 }
 
-.container .avatar-abbr {
-  width: 100%;
-  height: 100%;
+.container .fallback {
   font-size: 20px;
   font-weight: 500;
   text-transform: uppercase;
   color: black;
-  text-align: center;
-  line-height: 10px;
 }
